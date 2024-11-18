@@ -1,3 +1,5 @@
+'use client';
+
 import { Button } from "@/components/ui/button"
 import { Heart, Candy, IceCream } from "lucide-react"
 
@@ -23,9 +25,21 @@ export default function Capa() {
         <p className="text-xl md:text-2xl text-blue-600 mb-8">
           Descubra o paraíso dos doces!
         </p>
-        <Button className="bg-blue-500 hover:bg-blue-950 text-white font-bold py-2 px-4 rounded-full text-lg">
-          Explorar Doces
-        </Button>
+        <Button
+  className="bg-blue-500 hover:bg-blue-950 text-white font-bold py-2 px-4 rounded-full text-lg"
+  onClick={() => {
+    const targetSection = document.getElementById('target-section');
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  }}
+>
+  Explorar Doces
+</Button>
+
       </div>
       
       <div className="absolute bottom-0 left-0 w-full">

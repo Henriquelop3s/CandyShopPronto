@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import {cn} from "@/lib/utils"
+import { CartProvider } from '@/context/cartcontext';
+import { useCart } from "@/context/cartcontext"; // Importação do contexto, se estiver usando
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,12 +27,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    
     <html lang="en">
       <body className={cn(
       "min-h-screen bg-background font-sans antialiased inter.className"
       )}>
+        <CartProvider>
         {children}
+        </CartProvider>
       </body>
     </html>
+    
   );
 }

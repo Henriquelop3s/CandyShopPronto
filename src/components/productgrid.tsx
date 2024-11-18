@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
+import { useCart } from "@/context/cartcontext"; // Importação do contexto, se estiver usando
+
 
 interface Product {
   id: number;
@@ -26,17 +28,18 @@ const products: Product[] = [
 ];
 
 export default function ProductsCards() {
-  const handleAddToCart = (productId: number) => {
-    console.log(`Added product ${productId} to cart`);
-    // Implement your add to cart logic here
+  const { addToCart } = useCart(); // Hook do contexto de carrinho
+
+  const handleAddToCart = (product: Product) => {
+    addToCart({ ...product, quantity: 1 }); // Lógica para adicionar ao carrinho
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8" id="target-section">
       <h1 className="text-3xl font-bold text-center mb-8">Trufas</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {products.map((product) => (
-          <Card key={product.id} className="overflow-hidden">
+          <Card key={product.id} className="overflow-hidden shadow-lg rounded-md">
             <CardHeader className="p-0">
               <Image
                 src={product.image}
@@ -51,8 +54,16 @@ export default function ProductsCards() {
               <p className="text-2xl font-bold text-primary">${product.price.toFixed(2)}</p>
             </CardContent>
             <CardFooter className="p-4 pt-0">
-              <Button className="w-full" onClick={() => handleAddToCart(product.id)}>
-                <ShoppingCart className="mr-2 h-4 w-4" /> Add to Cart
+              <Button
+                className="w-full bg-zinc-800 text-white font-semibold py-2 px-4 rounded 
+               hover:bg-green-800 
+               active:bg-green-500
+               focus:outline-none focus:ring-2 focus:ring-blue-300"
+                onClick={() =>
+                  addToCart({ id: product.id, name: product.name, price: product.price, image: product.image, quantity: 1 })
+                }
+              >
+                <ShoppingCart className="mr-2 h-4 w-4" /> Adicionar ao Carrinho
               </Button>
             </CardFooter>
           </Card>
