@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import HeaderCart from '@/components/ui/carticon'; // Importando o HeaderCart
+import HeaderCart from '@/components/ui/carticon';
 
 export default function Component() {
   return (

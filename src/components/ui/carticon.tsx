@@ -1,9 +1,9 @@
 'use client';
 
-import { useCart } from '@/context/cartcontext'; // Use o contexto global do carrinho
+import { useCart } from '@/context/cartcontext'; 
 import { ShoppingCart } from 'lucide-react';
 import { Button } from "@/components/ui/button";
-import Link from 'next/link';  // Importe o Link do Next.js
+import Link from 'next/link';  
 
 export default function HeaderCart() {
   const { cartItems } = useCart();

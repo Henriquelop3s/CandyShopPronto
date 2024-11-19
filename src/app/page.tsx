@@ -1,6 +1,4 @@
-import Image from "next/image";
 import HeaderComponent from "../components/header"
-import ImageFirst from "@/components/imagefirst";
 import ProductsCards from "@/components/productgrid";
 import Footer from "@/components/footer";
 import Capa from "@/components/capa";
