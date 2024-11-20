@@ -41,25 +41,43 @@ const CartPage = () => {
           <CardContent>
             {cartItems.length > 0 ? (
               cartItems.map(item => (
-                <div key={item.id} className="flex items-center gap-4 py-4 flex-wrap justify-between">
+                <div key={item.id} className="flex items-center gap-4 py-4 flex-wrap">
   <img src={item.image} alt={item.name} className="w-20 h-20 object-cover rounded" />
   <div className="flex-grow">
-    <h3 className="font-semibold">{item.name}</h3>
+    <h3 className="font-semibold text-sm sm:text-base">{item.name}</h3>
     <p className="text-sm text-gray-500">R${item.price.toFixed(2)}</p>
   </div>
-  <div className="flex items-center gap-2">
-    <Button variant="outline" size="icon" onClick={() => updateQuantity(item.id, item.quantity - 1)}>
-      <Minus className="h-4 w-4" />
+  <div className="flex items-center gap-2 flex-shrink-0">
+    <Button
+      variant="outline"
+      size="icon"
+      onClick={() => updateQuantity(item.id, item.quantity - 1)}
+      className="text-sm sm:text-base"
+    >
+      <Minus className="h-4 w-4 sm:h-5 sm:w-5" />
     </Button>
-    <span className="w-8 text-center">{item.quantity}</span>
-    <Button variant="outline" size="icon" onClick={() => updateQuantity(item.id, item.quantity + 1)}>
-      <Plus className="h-4 w-4" />
+    <span className="w-8 text-center text-sm sm:text-base">{item.quantity}</span>
+    <Button
+      variant="outline"
+      size="icon"
+      onClick={() => updateQuantity(item.id, item.quantity + 1)}
+      className="text-sm sm:text-base"
+    >
+      <Plus className="h-4 w-4 sm:h-5 sm:w-5" />
     </Button>
   </div>
-  <Button variant="destructive" size="icon" onClick={() => removeItem(item.id)} className="mt-2 md:mt-0">
-    <Trash2 className="h-4 w-4" />
-  </Button>
+  <div className="flex-shrink-0">
+    <Button
+      variant="destructive"
+      size="icon"
+      onClick={() => removeItem(item.id)}
+      className="text-sm sm:text-base"
+    >
+      <Trash2 className="h-4 w-4 sm:h-5 sm:w-5" />
+    </Button>
+  </div>
 </div>
+
 
               ))
             ) : (
