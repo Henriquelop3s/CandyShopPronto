@@ -1,6 +1,5 @@
 import HeaderComponent from "../components/header"
 import ProductsCards from "@/components/productgrid";
-import Footer from "@/components/footer";
 import Capa from "@/components/capa";
 import Background from "@/components/background";
 
@@ -14,7 +13,7 @@ export default function Home() {
     <Capa />
     
     <ProductsCards />
-    <Footer />
+    
   </div>
   );
 }

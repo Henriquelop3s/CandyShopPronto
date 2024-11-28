@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased"
+          "min-h-screen font-sans antialiased bg-transparent"
         )}
       >
         {/* Envolvendo o conteúdo com o provedor de contexto do carrinho */}

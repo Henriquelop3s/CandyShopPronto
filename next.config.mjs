@@ -1,9 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+// next.config.mjs
+export default {
   images: {
-    domains: ['i.pinimg.com'], // Adicione aqui os domínios permitidos
+    domains: [
+      'cdn.awsli.com.br',
+      'images.tcdn.com.br',
+      'chocolatesgrazigrazi.com.br',
+    ],
   },
 };
-
-export default nextConfig;
-

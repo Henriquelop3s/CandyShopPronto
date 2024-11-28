@@ -15,16 +15,12 @@ interface Product {
 }
 
 const products: Product[] = [
-  { id: 1, name: "Confete", price: 3.00, image: "https://i.pinimg.com/564x/03/ab/de/03abdeb0ef8bc0b12765537eade06f77.jpg" },
-  { id: 2, name: "Beijinho", price: 3.00, image: "https://i.pinimg.com/564x/03/ab/de/03abdeb0ef8bc0b12765537eade06f77.jpg" },
-  { id: 3, name: "Leite Ninho", price: 3.00, image: "https://i.pinimg.com/564x/03/ab/de/03abdeb0ef8bc0b12765537eade06f77.jpg" },
-  { id: 4, name: "Negresco", price: 3.00, image: "https://i.pinimg.com/564x/03/ab/de/03abdeb0ef8bc0b12765537eade06f77.jpg" },
-  { id: 5, name: "Morango", price: 3.00, image: "https://i.pinimg.com/564x/03/ab/de/03abdeb0ef8bc0b12765537eade06f77.jpg" },
-  { id: 6, name: "Maracujá", price: 3.00, image: "https://i.pinimg.com/564x/03/ab/de/03abdeb0ef8bc0b12765537eade06f77.jpg" },
-  { id: 7, name: "Cone Confete", price: 5.00, image: "https://i.pinimg.com/564x/03/ab/de/03abdeb0ef8bc0b12765537eade06f77.jpg" },
-  { id: 8, name: "Cone Ninho", price: 5.00, image: "https://i.pinimg.com/564x/03/ab/de/03abdeb0ef8bc0b12765537eade06f77.jpg" },
-  { id: 9, name: "Cone Negresco", price: 5.00, image: "https://i.pinimg.com/564x/03/ab/de/03abdeb0ef8bc0b12765537eade06f77.jpg" },
-  { id: 10, name: "Cone Beijinho", price: 5.00, image: "https://i.pinimg.com/564x/03/ab/de/03abdeb0ef8bc0b12765537eade06f77.jpg" },
+  { id: 3, name: "Leite Ninho", price: 3.00, image: "https://cdn.awsli.com.br/2500x2500/761/761999/produto/46031789/80c5b39249.jpg" },
+  { id: 4, name: "Negresco", price: 3.00, image: "https://images.tcdn.com.br/img/img_prod/1079370/embalgem_para_trufa_sabores_biscoito_14_5x15_5cm_2359_1_d6385b86e498df86bb43602842dec67c.png" },
+  { id: 5, name: "Maracujá", price: 3.00, image: "https://images.tcdn.com.br/img/img_prod/812131/embalagem_para_trufa_sabor_maracuja_185_1_e3b914b29df0188de06520e9214528ad.jpg" },
+  { id: 6, name: "Cone Ninho", price: 5.00, image: "https://chocolatesgrazigrazi.com.br/cdn/shop/files/Capturadetela14.06.2023as11.07.13AM_1728x.png?v=1686751668" },
+  { id: 7, name: "Cone Negresco", price: 5.00, image: "https://chocolatesgrazigrazi.com.br/cdn/shop/files/Capturadetela14.06.2023as11.07.13AM_1728x.png?v=1686751668" },
+  
 ];
 
 export default function ProductsCards() {
