@@ -11,12 +11,12 @@ export default function Capa() {
         <div className="absolute top-1/2 left-1/4 animate-float animation-delay-1000"></div>
       </div>
       
-      <div className="z-10 text-center">
+      <div className="z-10 text-center ">
         <h1 className="text-4xl md:text-6xl font-extrabold text- mb-4">
           Douceur
         </h1>
         <p className="text-xl md:text-2xl text-blue-600 mb-8">
-          Descubra o esse sabor único!
+          Descubra esse sabor único!
         </p>
         <Button
           className="bg-blue-500 hover:bg-blue-950 text-white font-bold py-2 px-4 rounded-full text-lg transform hover:scale-105"
